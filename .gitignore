@@ -1,0 +1,33 @@
+# --- Security & Secrets ---
+.env
+*.pem
+*.key
+
+# --- Virtual Environments ---
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+
+# --- MLOps & Experiment Tracking ---
+mlruns/
+.mlruns/
+
+# --- Data & Artifacts ---
+# We ignore the contents of raw and processed data, but allow synthetic data if you want to share it
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Ignore large model weights and scalers
+*.h5
+*.pkl
+*.weights.h5
+
+# --- OS & Editor Files ---
+.DS_Store
+.vscode/
+.idea/
+*.swp
