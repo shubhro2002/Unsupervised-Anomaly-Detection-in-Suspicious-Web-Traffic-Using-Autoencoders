@@ -63,6 +63,24 @@ To run this pipeline locally:
 Install dependencies from the requirements file.
 ```bash
 pip install -r requirements.txt
+
+### 2. MLOps Tracking Server
+Start the MLflow UI in a dedicated terminal instance.
+```bash
+mlflow ui --port 5000
+
+## 3. Model Training
+Execute the training script to build the VAE and calculate the threshold.
+```bash
+python src/train_autoencoder.py
+
+## 4. API Serving
+Start the FastAPI server for real-time inference.
+```bash
+uvicorn src.serve_model:app --reload
+
+Access the Swagger UI at http://127.0.0.1:8000/docs
+
 ```
 ### 2. MLOps Tracking Server
 Start the MLflow UI in a dedicated terminal instance.
@@ -85,4 +103,11 @@ Access the Swagger UI at http://127.0.0.1:8000/docs
 Ensure Ollama is installed and the Llama-3 model is running (`ollama run llama3`). Execute the threat intelligence script to simulate an anomaly detection event and generate the SOC report.
 ```bash
 python src/threat_intel_rag.py
-```
+
+![Metrics and Parameters](images/metrics_and_parameters.png)
+
+![Reconstruction Loss](images/reconstruction_loss.png)
+
+![KL Loss](images/kl_loss.png)
+
+![Total Loss](images/total_loss.png)
