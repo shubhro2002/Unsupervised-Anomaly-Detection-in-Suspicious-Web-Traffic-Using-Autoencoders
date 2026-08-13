@@ -86,10 +86,10 @@ Ensure Ollama is installed and the Llama-3 model is running (`ollama run llama3`
 ```bash
 python src/threat_intel_rag.py
 
-![Metrics and Parameters](/images/metrics_and_parameters.png)
+![Metrics and Parameters](images/metrics_and_parameters.png)
 
-![Reconstruction Loss](/images/reconstruction_loss.png)
+![Reconstruction Loss](images/reconstruction_loss.png)
 
-![KL Loss](/images/kl_loss.png)
+![KL Loss](images/kl_loss.png)
 
-![Total Loss](/images/total_loss.png)
+![Total Loss](images/total_loss.png)
