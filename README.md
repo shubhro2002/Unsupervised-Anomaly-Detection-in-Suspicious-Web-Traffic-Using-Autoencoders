@@ -81,6 +81,24 @@ uvicorn src.serve_model:app --reload
 
 Access the Swagger UI at http://127.0.0.1:8000/docs
 
+```
+### 2. MLOps Tracking Server
+Start the MLflow UI in a dedicated terminal instance.
+```bash
+mlflow ui --port 5000
+```
+## 3. Model Training
+Execute the training script to build the VAE and calculate the threshold.
+```bash
+python src/train_autoencoder.py
+```
+## 4. API Serving
+Start the FastAPI server for real-time inference.
+```bash
+uvicorn src.serve_model:app --reload
+```
+Access the Swagger UI at http://127.0.0.1:8000/docs
+
 ## 5. Threat Intelligence Generation
 Ensure Ollama is installed and the Llama-3 model is running (`ollama run llama3`). Execute the threat intelligence script to simulate an anomaly detection event and generate the SOC report.
 ```bash
