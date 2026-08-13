@@ -103,6 +103,7 @@ Access the Swagger UI at http://127.0.0.1:8000/docs
 Ensure Ollama is installed and the Llama-3 model is running (`ollama run llama3`). Execute the threat intelligence script to simulate an anomaly detection event and generate the SOC report.
 ```bash
 python src/threat_intel_rag.py
+```
 
 ![Metrics and Parameters](images/metrics_and_parameters.png)
 
